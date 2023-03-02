@@ -7,3 +7,51 @@
     you will need a "filter" button with a type of "button" and a
     "load data" button with a type of "submit" on it
 -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trinity Killip Labs</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header"><h1>Trinity Killip's Labs</h1></header>
+      <!-- wrapper -->
+      <div class="container">
+        <!-- container -->
+        <div class="left_section box">
+          <!-- left inputs-->
+          <h2>Form Inputs</h2>
+          <!-- FOR LAB 5-->
+          <form
+            action="https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json"
+            class="box main_form"
+          >
+            <div>
+              <label for="resto">Restaurant Name</label>
+              <input type="text" id="resto" name="resto" />
+            </div>
+            <button type="submit">Load Data</button>
+            <button type="button" class="filter_button">Filter Data</button>
+          </form>
+        </div>
+        <div class="right_section_box">
+          <!-- right side -->
+          <!-- images box-->
+          <h2>Local Restaurant Link</h2>
+
+          <div class="box" id="restaurant_list">
+            <!-- description box-->
+            A list of restaurants from an API
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <a href="https://github.com/tkillip7">TKILLIP7</a>
+      </footer>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
