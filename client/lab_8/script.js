@@ -52,6 +52,10 @@ function initMap() {
 }
 
 function markerPlace(array, map) {
+  /*test*/
+  const coordinates = data.map((item) => ({
+    latitude: item.latitude,
+  }));
   console.log("array for markers", array);
 
   map.eachLayer((layer) => {
