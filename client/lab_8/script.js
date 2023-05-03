@@ -52,10 +52,6 @@ function initMap() {
 }
 
 function markerPlace(array, map) {
-  /*test*/
-  const coordinates = data.map((item) => ({
-    latitude: item.latitude,
-  }));
   console.log("array for markers", array);
 
   map.eachLayer((layer) => {
@@ -63,6 +59,11 @@ function markerPlace(array, map) {
       layer.remove();
     }
   });
+
+  if (array.length > 0) {
+    const { coordinates } = array[0].geocoded_column_1;
+    map.panTo(new L.LatLng(coordinates[1], coordinates[0]));
+  }
 
   array.forEach((item) => {
     console.log("markerPlace", item);
